@@ -1,0 +1,15 @@
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\Hospital.csproj.AssemblyReference.cache
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\Hospital.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\Hospital.AssemblyInfoInputs.cache
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\Hospital.AssemblyInfo.cs
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\Hospital.csproj.CoreCompileInputs.cache
+E:\Programms\Lab5_KazanovAlexandr\Hospital\bin\Debug\net7.0\Hospital.exe
+E:\Programms\Lab5_KazanovAlexandr\Hospital\bin\Debug\net7.0\Hospital.deps.json
+E:\Programms\Lab5_KazanovAlexandr\Hospital\bin\Debug\net7.0\Hospital.runtimeconfig.json
+E:\Programms\Lab5_KazanovAlexandr\Hospital\bin\Debug\net7.0\Hospital.dll
+E:\Programms\Lab5_KazanovAlexandr\Hospital\bin\Debug\net7.0\Hospital.pdb
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\Hospital.dll
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\refint\Hospital.dll
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\Hospital.pdb
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\Hospital.genruntimeconfig.cache
+E:\Programms\Lab5_KazanovAlexandr\Hospital\obj\Debug\net7.0\ref\Hospital.dll
