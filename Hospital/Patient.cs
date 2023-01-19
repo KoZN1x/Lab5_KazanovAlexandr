@@ -26,5 +26,9 @@ namespace Hospital
         {
             return $"Patients name is {name}. Patients age is {age}. Patients diagnosis is {diagnosis}.";
         }
+        public string GetPatientName()
+        {
+            return name;
+        }
     }
 }

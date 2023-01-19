@@ -27,7 +27,11 @@
             var ivan = new Patient("Ivan", 27, "Healthy");
 
             var hospital = new Hospital();
+
             hospital.overflow += hospital.Notify;
+            hospital.patientAdding += s => Console.WriteLine(s);
+            hospital.patientRemoving += s => Console.WriteLine(s);
+            hospital.patientChangingDiagnosis += s => Console.WriteLine(s);
 
             hospital.AddPatient(alex);
             hospital.AddPatient(dima);
