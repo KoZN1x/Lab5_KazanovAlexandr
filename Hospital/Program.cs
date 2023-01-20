@@ -28,11 +28,6 @@
 
             var hospital = new Hospital();
 
-            hospital.overflow += hospital.Notify;
-            hospital.patientAdding += s => Console.WriteLine(s);
-            hospital.patientRemoving += s => Console.WriteLine(s);
-            hospital.patientChangingDiagnosis += s => Console.WriteLine(s);
-
             hospital.AddPatient(alex);
             hospital.AddPatient(dima);
             hospital.AddPatient(misha);
@@ -54,15 +49,14 @@
 
 
             View(hospital.ToString());
-            //Console.WriteLine(hospital.ToString());
 
             hospital.ChangeDiagnosis(alex, "Healthy");
+            hospital.ChangeDiagnosis(ivan, "Healthy");
             View(hospital.ToString());
-            //Console.WriteLine(hospital.ToString());
 
+            hospital.RemovePatient(ivan);
             hospital.RemovePatient(dima);
             View(hospital.ToString());
-            //Console.WriteLine(hospital.ToString());
         }
     }
 }
