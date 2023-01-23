@@ -13,7 +13,7 @@ namespace Hospital
         public event Action? overflow;
         public event Action<string>? patientAdding;
         public event Action<string>? patientRemoving;
-        public List<Patient> patients = new List<Patient>();
+        private List<Patient> patients = new List<Patient>();
 
         public void AddPatient(Patient patient)
         {
@@ -35,7 +35,7 @@ namespace Hospital
                 patients.Remove(patient);
                 patientRemoving?.Invoke($"Patient {patient.GetPatientName()} was successfully removed from the hospital!");
             }
-            else Console.WriteLine($"Patient {patient.GetPatientName()} doesn't exist!");
+            else throw new Exception($"Patient {patient.GetPatientName()} doesn't exist!");
         }
 
         public void ChangeDiagnosis(Patient patient, string diagnosis)
@@ -44,7 +44,7 @@ namespace Hospital
             {
                 patient.SetDiagnosis(diagnosis);
             }
-            else Console.WriteLine($"Patient {patient.GetPatientName()} doesn't exist!"); ;
+            else throw new Exception($"Patient {patient.GetPatientName()} doesn't exist!");
         }
 
         public override string ToString()
@@ -56,10 +56,15 @@ namespace Hospital
             }
             return stringBuilder.ToString();
         }
+        public List<Patient> GetListOfPatients()
+        {
+            return patients;
+        }
 
         private bool IsOverflowed()
         {
             return patients.Count >= 15;  
         }
+
     }
 }

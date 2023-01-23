@@ -20,6 +20,7 @@ namespace Hospital
             this.age = age;
             this.diagnosis = diagnosis;
         }
+
         public string SetDiagnosis(string diagnosis)
         {
             this.diagnosis = diagnosis;
