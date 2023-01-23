@@ -8,25 +8,18 @@ using System.Xml.Linq;
 namespace Hospital
 {
     delegate void Delegate(string s);
-    internal class Hospital : INotifyable
+    internal class Hospital
     {
-        public event Action<Patient>? overflow;
+        public event Action? overflow;
         public event Action<string>? patientAdding;
         public event Action<string>? patientRemoving;
-        private List<Patient> patients = new List<Patient>();
-
-        public Hospital()
-        {
-            overflow += Notify;
-            patientAdding += s => Console.WriteLine(s);
-            patientRemoving += s => Console.WriteLine(s);
-        }
+        public List<Patient> patients = new List<Patient>();
 
         public void AddPatient(Patient patient)
         {
             if (IsOverflowed())
             {
-                overflow?.Invoke(patient);
+                overflow?.Invoke();
             }
             else
             {
@@ -66,19 +59,7 @@ namespace Hospital
 
         private bool IsOverflowed()
         {
-            if (patients.Count >= 15)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public void Notify(Patient patient)
-        {
-            Console.WriteLine($"Hospital is overflowed! Can't add patient: {patient.GetPatientName()}");
+            return patients.Count >= 15;  
         }
     }
 }

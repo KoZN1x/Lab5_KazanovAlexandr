@@ -8,6 +8,6 @@ namespace Hospital
 {
     internal interface INotifyable
     {
-        public void Notify(Patient patient);
+        public void Notify();
     }
 }

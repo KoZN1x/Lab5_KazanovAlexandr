@@ -19,7 +19,6 @@ namespace Hospital
             this.name = name;
             this.age = age;
             this.diagnosis = diagnosis;
-            patientChangingDiagnosis += s => Console.WriteLine(s);
         }
         public string SetDiagnosis(string diagnosis)
         {

@@ -27,7 +27,10 @@
             var ivan = new Patient("Ivan", 27, "Healthy");
 
             var hospital = new Hospital();
-
+            hospital.overflow += Notify;
+            hospital.patientAdding += s => Console.WriteLine(s);
+            hospital.patientRemoving += s => Console.WriteLine(s);
+            
             hospital.AddPatient(alex);
             hospital.AddPatient(dima);
             hospital.AddPatient(misha);
@@ -47,6 +50,11 @@
             hospital.AddPatient(dmitryi);
             hospital.AddPatient(ivan);
 
+            foreach (var patient in hospital.patients)
+            {
+                patient.patientChangingDiagnosis += s => Console.WriteLine(s);
+            }
+
 
             View(hospital.ToString());
 
@@ -57,6 +65,11 @@
             hospital.RemovePatient(ivan);
             hospital.RemovePatient(dima);
             View(hospital.ToString());
+
+            static void Notify()
+            {
+                Console.WriteLine("Hospital is overflowed! Can't add patient!");
+            }
         }
     }
 }
